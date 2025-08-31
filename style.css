@@ -1,0 +1,156 @@
+/* Info section below the banner: two columns, centered */
+.info-section {
+	display: table;
+	width: 80%;
+	margin: 40px auto 0 auto;
+	background: #f0fbfc; /* Very light teal background */
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0,80,120,0.08);
+	padding: 30px 0;
+}
+
+.info-image {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+	text-align: center;
+	padding: 0 20px;
+	max-width: 300px;
+}
+
+.info-image {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0,80,120,0.10);
+}
+
+.info-text {
+	display: table-cell;
+	width: 50%;
+	vertical-align: middle;
+	padding: 0 30px;
+	color: #005078;
+	text-align: left;
+}
+
+.info-text h3 {
+	font-size: 1.6em;
+	margin-top: 0;
+	color: #0097a7;
+}
+
+.info-text p {
+	font-size: 1.1em;
+	margin-bottom: 0;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 700px) {
+	.info-section {
+		display: block;
+		width: 95%;
+		padding: 20px 0;
+	}
+	.info-image, .info-text {
+		display: block;
+		width: 100%;
+		text-align: center;
+		padding: 10px 0;
+	}
+	.info-text {
+		text-align: center;
+	}
+}
+/* Simple site header style */
+.site-header {
+	background-color: #005078; /* Deep blue for header */
+	color: #e0f7fa; /* Soft blue text */
+	text-align: center;
+	padding: 20px 0 10px 0;
+	margin: 0;
+}
+
+.site-header h2 {
+	font-size: 2em;
+	margin: 0;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+/* Set a modern, easy-to-read font for the whole page */
+body {
+	font-family: 'Segoe UI', Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #e6f7fa; /* Light teal background for calmness */
+}
+
+/* Style the CTA banner section */
+.cta-banner {
+	position: relative;
+	background: url('img/cta-bg.jpg') center/cover no-repeat;
+	color: #fff;
+	text-align: center;
+	padding: 80px 20px;
+	min-height: 400px; /* Make the banner tall */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+/* Add a light overlay to keep the image subtle and text readable */
+.cta-banner::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 80, 120, 0.5); /* Semi-transparent blue overlay */
+	z-index: 1;
+}
+
+/* Ensure text and button appear above the overlay */
+.cta-banner > * {
+	position: relative;
+	z-index: 2;
+}
+
+/* Main heading style */
+.cta-banner h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	color: #e0f7fa; /* Soft blue for heading */
+}
+
+/* Description text style */
+.cta-banner p {
+	font-size: 1.2em;
+	max-width: 500px;
+	margin: 0 auto 30px auto;
+	color: #e0f7fa;
+}
+
+/* CTA button style */
+.cta-button {
+	display: inline-block;
+	background-color: #00bcd4; /* Bright teal for button */
+	color: #fff;
+	padding: 16px 36px;
+	font-size: 1.1em;
+	border: none;
+	border-radius: 6px;
+	text-decoration: none;
+	font-weight: bold;
+	box-shadow: 0 4px 12px rgba(0, 80, 120, 0.15);
+	transition: background 0.2s;
+	cursor: pointer;
+}
+
+/* Button hover effect */
+.cta-button:hover {
+	background-color: #008ba3; /* Slightly darker teal on hover */
+}
